@@ -1,14 +1,20 @@
 # main.py
 import time
+import json
 from measurement import Measurement
 import pyvisa
 
 
 def main():
+    # Load device configuration from devices.json
+    with open('devices/devices.json', 'r') as file:
+        devices = json.load(file)
+
     # Connect to the BK Precision 5493C device
+    device_info = devices["BK_Precision_5493C"]
     resource_manager = pyvisa.ResourceManager()
-    usb_device = resource_manager.open_resource("USB0::0x3121::0x5001::W111228111::INSTR",
-                                                timeout=10000)  # Set timeout to 10 seconds
+    usb_device = resource_manager.open_resource(device_info["resource_string"],
+                                                timeout=device_info["timeout"])  # Set timeout to 10 seconds
 
     # Query and print the instrument identification
     identification = usb_device.query("*IDN?")

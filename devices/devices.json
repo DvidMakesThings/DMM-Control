@@ -1,0 +1,6 @@
+{
+    "BK_Precision_5493C": {
+        "resource_string": "USB0::0x3121::0x5001::W111228111::INSTR",
+        "timeout": 10000
+    }
+}
