@@ -14,36 +14,39 @@
    <string>Widget</string>
   </property>
   <widget class="QProgressBar" name="progressBar">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>510</y>
-     <width>118</width>
-     <height>23</height>
+     <x>80</x>
+     <y>560</y>
+     <width>191</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="value">
-    <number>24</number>
+    <number>0</number>
    </property>
   </widget>
   <widget class="QGroupBox" name="groupBox">
    <property name="geometry">
     <rect>
-     <x>10</x>
+     <x>20</x>
      <y>10</y>
      <width>311</width>
-     <height>171</height>
+     <height>221</height>
     </rect>
    </property>
    <property name="title">
     <string>Device Settings</string>
    </property>
-   <widget class="QComboBox" name="comboBox">
+   <widget class="QComboBox" name="DeviceMenu">
     <property name="geometry">
      <rect>
-      <x>70</x>
+      <x>110</x>
       <y>30</y>
-      <width>211</width>
+      <width>191</width>
       <height>22</height>
      </rect>
     </property>
@@ -61,55 +64,419 @@
      <string>Device</string>
     </property>
    </widget>
+   <widget class="QLabel" name="SNLabel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>190</y>
+      <width>121</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Serial Number:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="SNText">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>190</y>
+      <width>151</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="MeastypeLabel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>60</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Measurement</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="MeastypeMenu">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>60</y>
+      <width>191</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="DeviceIdLabel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>110</y>
+      <width>121</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Device ID:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="DeviceIdText">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>110</y>
+      <width>151</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="DeviceLabel_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>130</y>
+      <width>121</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Device:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="DeviceText">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>130</y>
+      <width>151</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="SoftwareLabel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>150</y>
+      <width>121</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Software version:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="SoftwareText">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>150</y>
+      <width>151</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="HardwareLabel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>170</y>
+      <width>131</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Hardware version:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="HardwareText">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>170</y>
+      <width>151</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>17</x>
+      <y>90</y>
+      <width>281</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Orientation::Horizontal</enum>
+    </property>
+   </widget>
   </widget>
-  <widget class="QGroupBox" name="groupBox_2">
+  <widget class="QGroupBox" name="AvgBox">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>230</y>
+     <x>20</x>
+     <y>250</y>
      <width>311</width>
-     <height>181</height>
+     <height>111</height>
     </rect>
    </property>
    <property name="title">
     <string>Avg measurement</string>
    </property>
-   <widget class="QLineEdit" name="lineEdit">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <widget class="QLineEdit" name="AvgEdit">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>70</y>
+      <x>100</x>
+      <y>30</y>
       <width>81</width>
-      <height>22</height>
+      <height>21</height>
      </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
     </property>
    </widget>
    <widget class="QLabel" name="AvgLabel">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>50</y>
-      <width>121</width>
-      <height>16</height>
+      <y>30</y>
+      <width>91</width>
+      <height>21</height>
      </rect>
     </property>
     <property name="text">
      <string>Count</string>
     </property>
    </widget>
-   <widget class="QRadioButton" name="radioButton">
+   <widget class="QLineEdit" name="IntervalEdit">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>60</y>
+      <width>81</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="IntervalLabel">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>20</y>
-      <width>151</width>
+      <y>60</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Interval (ms)</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="ResultBox">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>10</y>
+     <width>411</width>
+     <height>131</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="title">
+    <string>Result</string>
+   </property>
+   <widget class="QLCDNumber" name="lcdNumber">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>391</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="lineWidth">
+     <number>-4</number>
+    </property>
+    <property name="smallDecimalPoint">
+     <bool>false</bool>
+    </property>
+    <property name="digitCount">
+     <number>9</number>
+    </property>
+    <property name="segmentStyle">
+     <enum>QLCDNumber::SegmentStyle::Filled</enum>
+    </property>
+    <property name="value" stdset="0">
+     <double>0.000000000000000</double>
+    </property>
+    <property name="intValue" stdset="0">
+     <number>0</number>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="CopyButton">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>500</y>
+     <width>83</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Copy</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="SaveButton">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>500</y>
+     <width>83</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Save As ...</string>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="DetailsBox">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>370</y>
+     <width>311</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Measurement Details</string>
+   </property>
+   <widget class="QLabel" name="MeasNameLabel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>141</width>
       <height>20</height>
      </rect>
     </property>
     <property name="text">
-     <string>Enable</string>
+     <string>Measurement Name</string>
     </property>
    </widget>
+   <widget class="QLineEdit" name="MeasNameEdit">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>30</y>
+      <width>141</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="StartsFromLabel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>60</y>
+      <width>141</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Numbering from</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="StartsFromEdit">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>60</y>
+      <width>141</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>1</string>
+    </property>
+    <property name="frame">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="StartButton">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>500</y>
+     <width>83</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Start</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="statusView">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>170</y>
+     <width>411</width>
+     <height>411</height>
+    </rect>
+   </property>
   </widget>
  </widget>
  <resources/>
