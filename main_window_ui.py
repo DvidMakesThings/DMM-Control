@@ -108,6 +108,15 @@ class Ui_Widget(object):
         self.lcdNumber.setProperty("value", 0.0)
         self.lcdNumber.setProperty("intValue", 0)
         self.lcdNumber.setObjectName("lcdNumber")
+        # Set the stylesheet to make it look like a real LCD
+        self.lcdNumber.setStyleSheet("""
+            QLCDNumber {
+                
+                color: #2c3bad;
+                border: 2px solid gray;
+                border-radius: 5px;
+            }
+        """)
         self.CopyButton = QtWidgets.QPushButton(parent=Widget)
         self.CopyButton.setGeometry(QtCore.QRect(150, 500, 83, 29))
         self.CopyButton.setObjectName("CopyButton")
@@ -136,8 +145,9 @@ class Ui_Widget(object):
         self.StartButton.setGeometry(QtCore.QRect(20, 500, 83, 29))
         self.StartButton.setObjectName("StartButton")
         self.statusView = QtWidgets.QTextEdit(parent=Widget)
-        self.statusView.setEnabled(False)
+        self.statusView.setEnabled(True)
         self.statusView.setGeometry(QtCore.QRect(370, 170, 411, 411))
+        self.statusView.setReadOnly(True)  # Make the statusView read-only
         self.statusView.setObjectName("statusView")
 
         self.retranslateUi(Widget)

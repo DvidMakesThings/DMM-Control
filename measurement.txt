@@ -1,0 +1,23 @@
+Measurement done at: 2024-12-02_17-03-38
+Device ID: 
+Device: 
+Serial Number: 
+Software Version: 
+Hardware Version: 
+
+Measurement Type: DC Voltage
+Number of measurements: 10
+Interval: 500.0 ms
+
+8.346148920677019
+1.426620047649677
+1.7287279614445594
+4.3246219005416195
+6.124721894953158
+4.132931050118929
+7.60813151829944
+8.597447586846545
+8.81977816187774
+5.507750927601994
+
+Average Value: 5.66169
